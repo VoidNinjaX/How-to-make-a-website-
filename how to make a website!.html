@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Website Tutorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            height: 90%;
+            background-color: white;
+            border-radius: 8px;
+            overflow-y: scroll;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .loading-container {
+            text-align: center;
+            font-size: 24px;
+        }
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        #please-wait {
+            animation: blink 1s infinite;
+        }
+        #tutorial-content {
+            display: none;
+        }
+        .step {
+            margin-bottom: 30px;
+        }
+        .step code {
+            background-color: #f4f4f4;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            margin-top: 10px;
+        }
+        .step h2 {
+            font-size: 22px;
+            color: #333;
+        }
+        .step p {
+            font-size: 18px;
+        }
+        .step ul {
+            margin-top: 10px;
+        }
+        .step ul li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        .step .result {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0e7ff;
+            border-left: 4px solid #4a90e2;
+        }
+        .step code .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="loading-animation" class="loading-container">
+            <span id="please-wait">Please wait...</span>
+        </div>
+
+        <div id="tutorial-content">
+            <h1>Advanced Tutorial: Create a Professional Website</h1>
+
+            <div class="step">
+                <h2>Step 1: Set Up the Basic HTML Structure</h2>
+                <p>Start by creating an HTML file and setting up the basic structure using the DOCTYPE, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags.</p>
+                <p>Example:</p>
+                <code>
+&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="en"&gt;<br>
+&lt;head&gt;<br>
+    &lt;meta charset="UTF-8"&gt;<br>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+    &lt;title&gt;Professional Website&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+    &lt;h1&gt;Welcome to My Professional Website&lt;/h1&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+                </code>
+                <div class="result">
+                    This code sets up the essential tags for a webpage and a simple heading inside the body.
+                </div>
+            </div>
+
+            <div class="step">
+                <h2>Step 2: Adding a Responsive CSS Layout</h2>
+                <p>Next, let's add CSS for styling. We will add some basic CSS for responsiveness, setting fonts, margins, and a simple grid layout for the content.</p>
+                <p>Example:</p>
+                <code>
+&lt;style&gt;<br>
+    body {<br>
+        font-family: Arial, sans-serif;<br>
+        margin: 0;<br>
+        padding: 0;<br>
+        background-color: #f9f9f9;<br>
+    }<br><br>
+    .container {<br>
+        display: grid;<br>
+        grid-template-columns: repeat(3, 1fr);<br>
+        gap: 20px;<br>
+        padding: 20px;<br>
+    }<br><br>
+    .container div {<br>
+        background-color: #ffffff;<br>
+        padding: 20px;<br>
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);<br>
+        border-radius: 8px;<br>
+    }<br>
+&lt;/style&gt;
+                </code>
+                <div class="result">
+                    This will make a three-column responsive layout with padding and a box-shadow for the grid items.
+                </div>
+            </div>
+
+            <div class="step">
+                <h2>Step 3: Using Advanced HTML Elements</h2>
+                <p>Here, we will add more advanced HTML elements like forms, buttons, and input fields for a contact section.</p>
+                <p>Example:</p>
+                <code>
+&lt;form action="/submit" method="post"&gt;<br>
+    &lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+    &lt;input type="text" id="name" name="name" placeholder="Your Name" required&gt;<br><br>
+    &lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+    &lt;input type="email" id="email" name="email" placeholder="Your Email" required&gt;<br><br>
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+&lt;/form&gt;
+                </code>
+                <div class="result">
+                    This form allows users to submit their name and email. It’s basic but functional.
+                </div>
+            </div>
+
+            <div class="step">
+                <h2>Step 4: Adding Interactivity with JavaScript</h2>
+                <p>Now, let's add a JavaScript function to handle form submission and show an alert when the form is submitted.</p>
+                <p>Example:</p>
+                <code>
+&lt;script&gt;<br>
+    document.querySelector("form").addEventListener("submit", function(event) {<br>
+        event.preventDefault();<br>
+        alert("Form submitted!");<br>
+    });<br>
+&lt;/script&gt;
+                </code>
+                <div class="result">
+                    This JavaScript will intercept the form submission and display a simple alert to the user.
+                </div>
+            </div>
+
+            <div class="step">
+                <h2>Step 5: Final Touches and Optimization</h2>
+                <p>Finally, you can optimize your site by including external CSS files, minifying your JavaScript, and testing for browser compatibility.</p>
+                <ul>
+                    <li>Include external CSS via <code>&lt;link&gt;</code> tags for better maintainability.</li>
+                    <li>Minify your CSS and JavaScript files for faster load times.</li>
+                    <li>Test your website across different browsers and devices to ensure it's responsive.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loading-animation').style.display = 'none';
+                document.getElementById('tutorial-content').style.display = 'block';
+            }, 3000); 
+        };
+    </script>
+</body>
+</html>
+
