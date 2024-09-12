@@ -1,2 +1,1 @@
-# How-to-make-a-website-
-this teaches you how to make a website HTML
+Simply download the ile double click it and it will open in your browser and from there you can learn how to make a HTML website that could be used on google sites and other websites!
